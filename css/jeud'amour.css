@@ -1,0 +1,449 @@
+/*mise en page*/
+
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+
+*/{
+    font-family: 'Montserrat';
+  }
+
+body {  
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* slide feed */
+
+html{
+
+    box-sizing: border-box;
+    
+    }
+    
+    *,
+    *:after,
+    *:before{
+    
+    box-sizing: inherit
+    
+    }
+    
+    input[type="radio"]{position:absolute;left:-100vw}	
+        
+        label{cursor:pointer}
+        
+        
+    .slideshow {
+    
+    display: grid;
+    grid-template: "slider" 1fr;
+    place-items: center;
+    place-content: center;
+    overflow: hidden;
+    max-height: 3000px;
+    margin:2rem auto;
+        
+        }
+      
+        
+    .slideshow> * {
+    grid-area: slider;
+    max-width: 900px;
+    }	
+        
+        
+    .cadre-ratio {
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      z-index: -1;  
+    }
+        
+        
+    .slideshow  ul { 
+        
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+        
+    }
+        
+    .slideshow  ul  li {
+    aspect-ratio: 16 / 9;
+    min-width: 100%;
+    transition: transform .25s;
+    }
+        
+    .slideshow  ul  li	img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      user-select: none;
+    }
+    
+        
+        
+    /*navigateurs ne supportant pas aspect-ratio*/	
+     @supports not (aspect-ratio: 16 / 9) 
+     
+     {
+      .cadre-ratio ul >li::before {
+        content: "";
+        float: left;
+        padding-top: 56.25%;
+      }
+    
+      .cadre-ratio ul >li::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }   
+    
+        
+        
+     
+    #slide_img3:checked ~ .cadre-ratio ul > li{transform: translatex(-0%)}
+    #slide_img4:checked ~ .cadre-ratio ul > li{transform: translatex(-100%)}
+    #slide_img5:checked ~ .cadre-ratio ul > li{transform: translatex(-200%)}  
+    #slide_img6:checked ~ .cadre-ratio ul > li{transform: translatex(-300%)}
+    #slide_img7:checked ~ .cadre-ratio ul > li{transform: translatex(-400%)}
+    #slide_img8:checked ~ .cadre-ratio ul > li{transform: translatex(-500%)}  
+    #slide_img9:checked ~ .cadre-ratio ul > li{transform: translatex(-600%)}
+    #slide_img10:checked ~ .cadre-ratio ul > li{transform: translatex(-700%)}
+    #slide_img11:checked ~ .cadre-ratio ul > li{transform: translatex(-800%)}  
+    #slide_img12:checked ~ .cadre-ratio ul > li{transform: translatex(-900%)}
+    #slide_img13:checked ~ .cadre-ratio ul > li{transform: translatex(-1000%)}
+    #slide_img14:checked ~ .cadre-ratio ul > li{transform: translatex(-1100%)}  
+    #slide_img15:checked ~ .cadre-ratio ul > li{transform: translatex(-1200%)}
+    #slide_img16:checked ~ .cadre-ratio ul > li{transform: translatex(-1300%)}
+    #slide_img17:checked ~ .cadre-ratio ul > li{transform: translatex(-1400%)}
+    #slide_img18:checked ~ .cadre-ratio ul > li{transform: translatex(-1500%)}
+    #slide_img19:checked ~ .cadre-ratio ul > li{transform: translatex(-1600%)}
+   
+   
+    
+    
+     
+        
+    /******************fleches**************************/
+        
+        
+    .precedent{place-self: center left;	}
+    .suivant{place-self: center right;}
+        
+    
+    
+    .slideshow > .precedent > label,
+    .slideshow > .suivant > label{
+        
+    display: none;
+    background-color:hsl(0,0%,15%);
+    justify-content: center;
+    align-content: center
+        
+    }   
+            
+    .slideshow > .precedent > label:after{content:'←'}
+    .slideshow > .suivant > label:after{content:'→'}
+        
+    .slideshow > .precedent > label:after,
+    .slideshow > .suivant > label:after {
+        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:clamp(4rem, 4vw, 4rem);
+    color:hsl(0, 0%, 96%);
+    
+        
+        }   
+        
+    
+    
+    #slide_img3:checked ~ .precedent > label.img19,
+    #slide_img3:checked ~ .suivant > label.img4,
+    #slide_img4:checked ~ .precedent > label.img3,
+    #slide_img4:checked ~ .suivant > label.img5,
+    #slide_img5:checked ~ .precedent > label.img4,
+    #slide_img5:checked ~ .suivant > label.img6,
+    #slide_img6:checked ~ .precedent > label.img5,
+    #slide_img6:checked ~ .suivant > label.img7,
+    #slide_img7:checked ~ .precedent > label.img6,
+    #slide_img7:checked ~ .suivant > label.img8,
+    #slide_img8:checked ~ .precedent > label.img7,
+    #slide_img8:checked ~ .suivant > label.img9,
+    #slide_img9:checked ~ .precedent > label.img8,
+    #slide_img9:checked ~ .suivant > label.img10,
+    #slide_img10:checked ~ .precedent > label.img9,
+    #slide_img10:checked ~ .suivant > label.img11,
+    #slide_img11:checked ~ .precedent > label.img10,
+    #slide_img11:checked ~ .suivant > label.img12,
+    #slide_img12:checked ~ .precedent > label.img11,
+    #slide_img12:checked ~ .suivant > label.img13,
+    #slide_img13:checked ~ .precedent > label.img12,
+    #slide_img13:checked ~ .suivant > label.img14,
+    #slide_img14:checked ~ .precedent > label.img13,
+    #slide_img14:checked ~ .suivant > label.img15,
+    #slide_img15:checked ~ .precedent > label.img14,
+    #slide_img15:checked ~ .suivant > label.img16,
+    #slide_img16:checked ~ .precedent > label.img15,
+    #slide_img16:checked ~ .suivant > label.img17,
+    #slide_img17:checked ~ .precedent > label.img16,
+    #slide_img17:checked ~ .suivant > label.img18,
+    #slide_img18:checked ~ .precedent > label.img17,
+    #slide_img18:checked ~ .suivant > label.img19,
+    #slide_img19:checked ~ .precedent > label.img18,
+    #slide_img19:checked ~ .suivant > label.img3
+  
+    {
+
+    display:flex;
+    --size: clamp(2rem, 8vw, 4rem);
+    width:var(--size);
+    height:var(--size);
+        
+        }
+    
+    
+    
+    /***************************navigation puces bas********************************/
+    .puces {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    place-self: end center;
+        
+        }
+        
+    .puces label{
+        
+    --size: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    width: var(--size);
+    height: var(--size);
+        
+        }
+    
+    /********************simulation lien actif sur les puces******************************/
+    
+        
+    
+    #slide_img3:checked ~ .puces > label.img3 > .actif_puces,
+    #slide_img4:checked ~ .puces > label.img4 > .actif_puces,
+    #slide_img5:checked ~ .puces > label.img5 > .actif_puces,
+    #slide_img6:checked ~ .puces > label.img6 > .actif_puces,
+    #slide_img7:checked ~ .puces > label.img7 > .actif_puces,
+    #slide_img8:checked ~ .puces > label.img8 > .actif_puces,
+    #slide_img9:checked ~ .puces > label.img9 > .actif_puces,
+    #slide_img10:checked ~ .puces > label.img10 > .actif_puces,
+    #slide_img11:checked ~ .puces > label.img11 > .actif_puces,
+    #slide_img12:checked ~ .puces > label.img12 > .actif_puces,
+    #slide_img13:checked ~ .puces > label.img13 > .actif_puces,
+    #slide_img14:checked ~ .puces > label.img14 > .actif_puces,
+    #slide_img15:checked ~ .puces > label.img15 > .actif_puces,
+    #slide_img16:checked ~ .puces > label.img16 > .actif_puces,
+    #slide_img17:checked ~ .puces > label.img17 > .actif_puces,
+    #slide_img18:checked ~ .puces > label.img18 > .actif_puces,
+    #slide_img19:checked ~ .puces > label.img19 > .actif_puces
+ 
+    {
+      
+    border-radius: inherit;	
+    display: flex;
+    height: inherit;
+    width: inherit;
+    background-color: black;
+    
+    }
+        
+    .debut{
+    
+    margin: 0;
+    display:grid;
+    place-content:center;
+    height:158vh;
+    padding:1rem;
+    
+    
+    }
+
+   
+
+    /* footer*/
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+  }
+
+body{
+  background: #eef8ff;
+  }
+
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to right, #010a40, #2d0b00);
+  padding: 100px 0 30px;
+  font-size: 13px;
+  line-height: 20px;
+
+  }
+
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  }
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+  }
+
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+  }
+
+.logo{
+  width: 80px;
+  margin-bottom: 30px;
+  }
+
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  }
+
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+  }
+
+ul li{
+  list-style: none;
+  margin-bottom: 12px;
+  }
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  }
+
+form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+  }
+
+form .far{
+  font-size: 18px;
+  margin-right: 10px;
+  }
+
+form input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  }
+
+form button {
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  }
+
+form button .fas{
+  font-size: 16px;
+  color: #ccc;
+  }
+
+.social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+  }
+
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+  }
+
+.copyright {
+  text-align: center;
+  }
+
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+  }
+
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  animation: moving 2s linear infinite;
+  }
+
+@keyframes moving{
+  0%{
+      left: -20px;
+  }
+  100%{
+      left: 100%;
+  }
+}
+
+@media (max-width :700px){
+  footer{
+      bottom: unset;
+      }
+  .col{
+      flex-basis: 100%;
+      }
+  .col:nth-child(2), .col:nth-child(3){
+      flex-basis: 100%;
+      }
+          
+}
+  

@@ -1,0 +1,58 @@
+ 
+/* tete de page */
+
+ 
+
+header img {
+    width: 180px;
+}
+
+header {
+   display: flex;
+   align-items: center;
+   font-size: 25px;
+   background-color: rgb(9, 9, 9);
+   
+   
+    
+}
+
+
+/*page de bienvenue (landing page) */
+
+.landing-page {
+    padding: 60px 0px;
+
+}
+ 
+.scroll-down {
+    color: rgba(46, 43, 43, 0.325);
+    text-decoration: none;
+    position: absolute;
+    bottom: 300px;
+    
+   
+}
+
+
+
+/*menu de navigation */
+
+nav.nav {
+   
+    justify-content: space-between;
+    list-style: none;
+    width: 1000px;
+    margin-left:200px;
+    font-size: 18px;
+    background-color: #090909;
+     
+}
+
+nav.nav li {
+    color: rgb(4, 194, 227);
+    font-weight: bolder;
+    background-color: #090909;
+}
+
+

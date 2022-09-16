@@ -1,0 +1,340 @@
+    body {
+        color: #666;
+        font-weight:normal;
+        margin:0;
+        padding:0;
+        background: #ffffff;
+        font-size: 25px;
+        
+      }
+
+      h2 {
+         
+        color: #fff;
+         
+       
+        
+      }
+      .cardBox {
+        float: left;
+        font-size: 1.2em;
+        margin: 1% 0 0 1%;
+        perspective: 1000px;
+        transition: all 0.4s ease 0s;
+        width: 20%;
+        
+        
+         
+        
+      }
+      .cardBox:hover .card {
+        transform: rotateY(180deg);
+      }
+
+      /* card */
+
+      .card {
+        background: #318fae50;
+        cursor: pointer;
+        height: 700px;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease 0s;
+        width: 100%;
+        
+        
+        
+      }
+      .card p {
+        margin-bottom: 1.8em;
+        
+      }
+      .card .front,
+
+      /* card-text */
+
+      .card .back {
+        backface-visibility: hidden;
+        box-sizing: border-box;
+        color: rgb(0, 0, 0);
+        display: block;
+        font-size: 1.2em;
+        height: 100%;
+        padding: 0.8em 0.7em;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+
+        /* card bouton */
+
+      }
+      .card .front strong {
+        background: rgb(228, 228, 228);
+        border-radius: 100%;
+        color: rgb(205, 171, 171);
+        font-size: 1.5em;
+        line-height: 40px;
+        padding: 0 7px 4px 6px;
+      }
+      .card .back {
+        transform: rotateY(180deg);
+      }
+      .card .back a {
+        padding: 0.3em 0.5em;
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 1px;
+        font-size: 0.9em;
+        transition: all 0.2s ease 0s;
+    }
+
+
+      .card .back a:hover {
+        background: #fff;
+        color: #333;
+        text-shadow: 0 0 1px #333;
+      }
+      .cardBox:nth-child(1) .card .back {
+        background: #a9d1ea;
+          }
+      .cardBox:nth-child(2) .card .back {
+        background: #a9d1ea;
+      }
+      .cardBox:nth-child(3) .card .back {
+        background: #a9d1ea;
+      }
+      .cardBox:nth-child(4) .card .back {
+        background: #a9d1ea;
+      }
+      .cardBox:nth-child(1) .card {
+        background-image: url(../image/5-1.png);
+        background-size: cover;
+        -webkit-animation: giro 2s 1;
+        animation: giro 2s 1;
+      }
+      .cardBox:nth-child(2) .card {
+        background-image: url(../image/5-2.png);
+        background-size: cover;
+        -webkit-animation: giro 2s 1;
+        animation: giro 2s 1;
+      }
+      .cardBox:nth-child(3) .card {
+        background-image: url(../image/5-3.png);
+        background-size: cover;
+        -webkit-animation: giro 2s 1;
+        animation: giro 2s 1;
+      }
+     
+
+
+      @-webkit-keyframes giro {
+        from {
+          transform: rotateY(180deg);
+        }
+        to {
+          transform: rotateY(0deg);
+        }
+      }
+      @keyframes giro {
+        from {
+          transform: rotateY(180deg);
+        }
+        to {
+          transform: rotateY(0deg);
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .cardBox {
+          margin-left: 2.8%;
+          margin-top: 3%;
+          width: 46%;
+        }
+        .card {
+          height: 285px;
+        }
+        .cardBox:last-child {
+          margin-bottom: 3%;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .cardBox {
+          width: 94.5%;
+        }
+        .card {
+          height: 260px;
+        }
+      }
+
+      
+
+/* footer*/
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+  }
+
+body{
+  background: #eef8ff;
+  }
+
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to right, #010a40, #2d0b00);
+  padding: 100px 0 30px;
+  font-size: 13px;
+  line-height: 20px;
+
+  }
+
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  }
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+  }
+
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+  }
+
+.logo{
+  width: 80px;
+  margin-bottom: 30px;
+  }
+
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  }
+
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+  }
+
+ul li{
+  list-style: none;
+  margin-bottom: 12px;
+  }
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  }
+
+form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+  }
+
+form .far{
+  font-size: 18px;
+  margin-right: 10px;
+  }
+
+form input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  }
+
+form button {
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  }
+
+form button .fas{
+  font-size: 16px;
+  color: #ccc;
+  }
+
+.social-icons .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+  }
+
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+  }
+
+.copyright {
+  text-align: center;
+  }
+
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+  }
+
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  animation: moving 2s linear infinite;
+  }
+
+@keyframes moving{
+  0%{
+      left: -20px;
+  }
+  100%{
+      left: 100%;
+  }
+}
+
+@media (max-width :700px){
+  footer{
+      bottom: unset;
+      }
+  .col{
+      flex-basis: 100%;
+      }
+  .col:nth-child(2), .col:nth-child(3){
+      flex-basis: 100%;
+      }
+          
+}
+  

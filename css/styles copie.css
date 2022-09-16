@@ -1,0 +1,236 @@
+/*mise en page*/
+
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+
+*/{
+    font-family: 'Montserrat';
+  }
+
+body {  
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* tete de page */
+
+section.top-page  {
+    Background: url('../image/bg.jpg');
+    background-size: cover;
+    height: 80vh;
+    padding: 25px;
+}
+
+header img {
+    width: 150px;
+}
+
+header {
+   display: flex;
+   align-items: center;
+   font-size: 30px;
+}
+
+
+
+/*page de bienvenue (landing page) */
+
+.landing-page {
+    padding: 20px 50px;
+
+}
+
+h1.big-title {
+    color: rgb(0, 0, 0);
+    font-family: 'Abril FatFace', cursive;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.scroll-down {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 200px;
+}
+
+
+
+/*menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 400px;
+    margin-left: 30px;
+}
+
+
+nav.nav li {
+    color: rgb(3, 3, 3);
+}
+
+/* services*/
+
+.services {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.delivery-icon {
+    font-size: 100px;
+    color: rgb(158, 148, 73);
+}
+
+.service-details {
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+}
+
+/* best moments */
+
+.section-title {
+    font-size: 50px;
+    font-family: 'Abril FatFace', cursive;
+    font-weight: 100;
+    position: relative;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(158, 148, 73);
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+.best-items { 
+    margin: 100px;
+}
+
+.best-memories {
+    background-color: grey;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+.memories-box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    
+} 
+
+.no-grid  { 
+    min-width: 350px;
+    height: 500px;
+    flex: 1;
+}
+
+
+    
+.memories1 {
+        background-image: url(../image/1-1.png);
+    }
+
+.memories2 {
+        background-image: url(../image/1-2.png);
+    }
+
+.memories3 {
+        background-image: url(../image/1-3.png);
+    }
+
+.memories4 {
+        background-image: url(../image/1-4.png);
+    }
+
+.pictures-details { 
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.647);
+    padding: 5px 20px;
+}
+
+.pictures-name {
+    line-height: 3px;
+    font-size: 22px;
+    font-weight: 600;
+     
+}
+
+.pictures-price { 
+
+    line-height: 3px;
+    color: rgb(20, 115, 53);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* mes souvenirs */
+
+.all-memories {
+    margin: 100px;
+ }
+
+.memories-grid { 
+    display: grid;
+    min-height: 150vh; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 400px);
+ }
+
+.memories-grid1 { 
+    background-image: url(../image/2-1.png);
+    grid-column: 1/3;
+    grid-row: 1/3;
+ }
+
+ .memories-grid2 { 
+    background-image: url(../image/2-2.png);
+    grid-column: 3/5;
+     
+ }
+
+ .memories-grid3 { 
+    background-image: url(../image/2-3.png);
+    grid-column: 3/5;
+ }
+
+ .memories-grid4 { 
+    background-image: url(../image/2-4.png);
+    grid-column: 1;
+    grid-row: 3/5;
+ }
+
+ .memories-grid5 { 
+    background-image: url(../image/2-5.png);
+    grid-column: 2/4;
+    grid-row: 3/5;
+ }
+
+ .memories-grid6 { 
+    background-image: url(../image/2-6.png);
+    grid-column: 4;
+    grid-row: 3/5;
+ }
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
